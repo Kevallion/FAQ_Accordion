@@ -1,0 +1,71 @@
+/*** FONT ***/
+@font-face {
+    font-family:"WorkSans-italic" ;
+    src: url(../fonts/WorkSans-Italic-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family:"WorkSans" ;
+    src: url(../fonts/WorkSans-VariableFont_wght.ttf);
+}
+
+$font1: WorkSans;
+$font2: WorkSans-italic;
+
+/*** Color ***/
+$white: hsl(0, 0%, 100%);
+$lightPink: hsl(275, 100%, 97%);
+$grayishPurple: hsl(292, 16%, 49%);
+$darkPurple: hsl(292, 42%, 14%);
+
+
+/*** General Parameter ***/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: $font1;
+    font-size: 16px;
+    color: $grayishPurple;
+    background-color: $lightPink;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &::after{
+        position: absolute;
+        content: "";
+        background: url("../images/background-pattern-desktop.svg");
+        width: 100%;
+        height:320px ;
+        top: 0;
+        left: 0;
+        z-index: -1000;
+    }
+
+    h2{
+        font-size: 3.5rem;
+        color: $darkPurple;
+
+        @media (max-width:574px){
+          font-size: 2rem;
+        }
+    }
+
+    li{
+        list-style: none;
+    }
+
+    button{
+        cursor: pointer;
+        border: none;
+        background: none;
+    }
+}
+
+
